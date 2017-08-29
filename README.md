@@ -1,2 +1,2 @@
-# omid
-Twenty Seventeen WordPress child Theme
+# tanin
+Tanin Project
