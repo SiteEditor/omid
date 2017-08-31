@@ -60,7 +60,7 @@ get_header(); ?>
 
 		<?php
 		
-		The_Grid('wonderland custom post type', true);  
+		//The_Grid('wonderland custom post type', true);
 
 		?>
 
