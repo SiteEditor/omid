@@ -4,23 +4,23 @@
 //  (Please see http://codex.wordpress.org/Child_Themes#How_to_Create_a_Child_Theme)
 //
 
-function wonderland_enqueue_styles() {
+function omid_enqueue_styles() {
 
-    wp_enqueue_style( 'wonderland-parent-style', get_template_directory_uri() . '/style.css' );
+    wp_enqueue_style( 'omid-parent-style', get_template_directory_uri() . '/style.css' );
 
-    wp_enqueue_style( 'wonderland-style',
+    wp_enqueue_style( 'omid-style',
         get_stylesheet_directory_uri() . '/style.css',
         array('parent-style')
     );
 
-    wp_enqueue_script( "jquery-mousewheel" , get_stylesheet_directory_uri() . '/assets/js/jquery.mousewheel.min.js' , array( 'jquery' ) , "3.1.13" , true );
+    //wp_enqueue_script( "jquery-mousewheel" , get_stylesheet_directory_uri() . '/assets/js/jquery.mousewheel.min.js' , array( 'jquery' ) , "3.1.13" , true );
 
-    wp_enqueue_script( "simplr-smoothscroll" , get_stylesheet_directory_uri() . '/assets/js/jquery.simplr.smoothscroll.min.js' , array( 'jquery' ) , "1.0.1" , true );
+    //wp_enqueue_script( "simplr-smoothscroll" , get_stylesheet_directory_uri() . '/assets/js/jquery.simplr.smoothscroll.min.js' , array( 'jquery' ) , "1.0.1" , true );
 
     /**
      * Theme Front end main js
      */
-    wp_enqueue_script( "wonderland-script" , get_stylesheet_directory_uri() . '/assets/js/script.js' , array( 'jquery', 'carousel' , 'sed-livequery' , 'jquery-ui-accordion' , 'jquery-ui-tabs' , 'jquery-mousewheel' , 'simplr-smoothscroll' ) , "1.0.0" , true );
+    wp_enqueue_script( "omid-script" , get_stylesheet_directory_uri() . '/assets/js/script.js' , array( 'jquery', 'carousel' , 'sed-livequery' , 'jquery-ui-accordion' , 'jquery-ui-tabs' ) , "1.0.0" , true );
 
     //wp_enqueue_script('sed-masonry');
 
@@ -36,26 +36,26 @@ function wonderland_enqueue_styles() {
 
 }
 
-add_action( 'wp_enqueue_scripts', 'wonderland_enqueue_styles' , 0 );
+add_action( 'wp_enqueue_scripts', 'omid_enqueue_styles' , 0 );
 
-add_action( 'after_setup_theme', 'sed_wonderland_theme_setup' );
+add_action( 'after_setup_theme', 'sed_omid_theme_setup' );
 
-function sed_wonderland_theme_setup() {
+function sed_omid_theme_setup() {
 
-    load_child_theme_textdomain( 'wonderland', get_stylesheet_directory() . '/languages' );
+    load_child_theme_textdomain( 'omid', get_stylesheet_directory() . '/languages' );
 
     remove_filter( 'excerpt_more', 'twentyseventeen_excerpt_more' );
 
     /**
      * Short Description (excerpt).
      */
-    add_filter( 'wonderland_short_description', 'wptexturize' );
-    add_filter( 'wonderland_short_description', 'convert_smilies' );
-    add_filter( 'wonderland_short_description', 'convert_chars' );
-    add_filter( 'wonderland_short_description', 'wpautop' );
-    add_filter( 'wonderland_short_description', 'shortcode_unautop' );
-    add_filter( 'wonderland_short_description', 'prepend_attachment' );
-    add_filter( 'wonderland_short_description', 'do_shortcode', 11 ); // AFTER wpautop()
+    add_filter( 'omid_short_description', 'wptexturize' );
+    add_filter( 'omid_short_description', 'convert_smilies' );
+    add_filter( 'omid_short_description', 'convert_chars' );
+    add_filter( 'omid_short_description', 'wpautop' );
+    add_filter( 'omid_short_description', 'shortcode_unautop' );
+    add_filter( 'omid_short_description', 'prepend_attachment' );
+    add_filter( 'omid_short_description', 'do_shortcode', 11 ); // AFTER wpautop()
 
     // This theme uses wp_nav_menu() in two locations.
     register_nav_menus( array(
@@ -64,20 +64,20 @@ function sed_wonderland_theme_setup() {
 
 }
 
-function wonderland_excerpt_more( $link ) {
+function omid_excerpt_more( $link ) {
     if ( is_admin() ) {
         return $link;
     }
 
     return ' &hellip; ';
 }
-add_filter( 'excerpt_more', 'wonderland_excerpt_more' );
+add_filter( 'excerpt_more', 'omid_excerpt_more' );
 
-function wonderland_excerpt_length( $length ) {
+function omid_excerpt_length( $length ) {
     return 650;
 }
 
-add_filter( 'excerpt_length', 'wonderland_excerpt_length', 999 );
+add_filter( 'excerpt_length', 'omid_excerpt_length', 999 );
 
 /**
  * Add Site Editor Modules
@@ -85,32 +85,32 @@ add_filter( 'excerpt_length', 'wonderland_excerpt_length', 999 );
  * @param $modules
  * @return mixed
  */
-function sed_wonderland_add_modules( $modules ){
+function sed_omid_add_modules( $modules ){
 
     global $sed_pb_modules;
 
-    //$module_name = "themes/wonderland/site-editor/modules/posts/posts.php";
+    //$module_name = "themes/omid/site-editor/modules/posts/posts.php";
     //$modules[$module_name] = $sed_pb_modules->get_module_data(get_stylesheet_directory() . '/site-editor/modules/posts/posts.php', true, true);
 
-    //$module_name = "themes/wonderland/site-editor/modules/wonderland-products/wonderland-products.php";
-    //$modules[$module_name] = $sed_pb_modules->get_module_data(get_stylesheet_directory() . '/site-editor/modules/wonderland-products/wonderland-products.php', true, true);
+    //$module_name = "themes/omid/site-editor/modules/omid-products/omid-products.php";
+    //$modules[$module_name] = $sed_pb_modules->get_module_data(get_stylesheet_directory() . '/site-editor/modules/omid-products/omid-products.php', true, true);
     
-    $module_name = "themes/wonderland/site-editor/modules/in-btn-back/in-btn-back.php";
+    $module_name = "themes/omid/site-editor/modules/in-btn-back/in-btn-back.php";
     $modules[$module_name ] = $sed_pb_modules->get_module_data(get_stylesheet_directory() . '/site-editor/modules/in-btn-back/in-btn-back.php', true, true);
     
     
-    //$module_name = "themes/wonderland/site-editor/modules/vertical-header/vertical-header.php";
+    //$module_name = "themes/omid/site-editor/modules/vertical-header/vertical-header.php";
     //$modules[$module_name ] = $sed_pb_modules->get_module_data(get_stylesheet_directory() . '/site-editor/modules/vertical-header/vertical-header.php', true, true);
 
     
-    $module_name = "themes/wonderland/site-editor/modules/rocket/rocket.php";
+    $module_name = "themes/omid/site-editor/modules/rocket/rocket.php";
     $modules[$module_name ] = $sed_pb_modules->get_module_data(get_stylesheet_directory() . '/site-editor/modules/rocket/rocket.php', true, true);
     
     return $modules;
 
 }
 
-add_filter("sed_modules" , "sed_wonderland_add_modules" );
+add_filter("sed_modules" , "sed_omid_add_modules" );
 
 /**
  * Get an attachment ID given a URL.
@@ -154,14 +154,14 @@ function sed_theme_get_attachment_id_by_url( $url ) {
 
 
 
-function wonderland_register_theme_fields( $fields ){
+function omid_register_theme_fields( $fields ){
 
    /* $fields['products_archive_description'] = array(
         'type'              => 'textarea',
         'label'             => __('Product Archive Description', 'site-editor'),
         //'description'       => '',
         'transport'         => 'postMessage' ,
-        'setting_id'        => 'wonderland_products_archive_description',
+        'setting_id'        => 'omid_products_archive_description',
         'default'           => '',
         "panel"             => "general_settings" ,
     );
@@ -171,7 +171,7 @@ function wonderland_register_theme_fields( $fields ){
         'label'             => __('Home Page Product Description', 'site-editor'),
         //'description'       => '',
         'transport'         => 'postMessage' ,
-        'setting_id'        => 'wonderland_home_page_products_description',
+        'setting_id'        => 'omid_home_page_products_description',
         'default'           => '',
         "panel"             => "general_settings" ,
     );
@@ -185,15 +185,15 @@ function wonderland_register_theme_fields( $fields ){
             'label' => __('English Site Url', 'site-editor'),
             //'description'       => '',
             'transport' => 'postMessage',
-            'setting_id' => 'wonderland_english_site_url',
-            'default' => 'http://eng.wonderland.com',
+            'setting_id' => 'omid_english_site_url',
+            'default' => 'http://eng.omid.com',
             "panel" => "general_settings",
         );
 
     }
 
     $fields[ 'intro_logo' ] = array(
-        'setting_id'        => 'wonderland_intro_logo',
+        'setting_id'        => 'omid_intro_logo',
         'label'             => __('Intro Logo', 'translation_domain'),
         'type'              => 'image',
         //'priority'          => 10,
@@ -206,10 +206,10 @@ function wonderland_register_theme_fields( $fields ){
 
 }
 
-//add_filter( "sed_theme_options_fields_filter" , 'wonderland_register_theme_fields' , 10000 );
+//add_filter( "sed_theme_options_fields_filter" , 'omid_register_theme_fields' , 10000 );
 
 
-//add_action( 'pre_get_posts', 'wonderland_per_page_query' );
+//add_action( 'pre_get_posts', 'omid_per_page_query' );
 /**
  * Customize category query using pre_get_posts.
  *
@@ -219,7 +219,7 @@ function wonderland_register_theme_fields( $fields ){
  * @todo       Change prefix to theme or plugin prefix
  *
  */
-function wonderland_per_page_query( $query ) {
+function omid_per_page_query( $query ) {
 
     $taxonomy = is_tax() ? get_queried_object()->taxonomy:"";
 
