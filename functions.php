@@ -88,24 +88,10 @@ add_filter( 'excerpt_length', 'omid_excerpt_length', 999 );
 function sed_omid_add_modules( $modules ){
 
     global $sed_pb_modules;
-
-    //$module_name = "themes/omid/site-editor/modules/posts/posts.php";
-    //$modules[$module_name] = $sed_pb_modules->get_module_data(get_stylesheet_directory() . '/site-editor/modules/posts/posts.php', true, true);
-
-    //$module_name = "themes/omid/site-editor/modules/omid-products/omid-products.php";
-    //$modules[$module_name] = $sed_pb_modules->get_module_data(get_stylesheet_directory() . '/site-editor/modules/omid-products/omid-products.php', true, true);
     
     $module_name = "themes/omid/site-editor/modules/in-btn-back/in-btn-back.php";
     $modules[$module_name ] = $sed_pb_modules->get_module_data(get_stylesheet_directory() . '/site-editor/modules/in-btn-back/in-btn-back.php', true, true);
-    
-    
-    //$module_name = "themes/omid/site-editor/modules/vertical-header/vertical-header.php";
-    //$modules[$module_name ] = $sed_pb_modules->get_module_data(get_stylesheet_directory() . '/site-editor/modules/vertical-header/vertical-header.php', true, true);
 
-    
-    $module_name = "themes/omid/site-editor/modules/rocket/rocket.php";
-    $modules[$module_name ] = $sed_pb_modules->get_module_data(get_stylesheet_directory() . '/site-editor/modules/rocket/rocket.php', true, true);
-    
     return $modules;
 
 }
@@ -242,6 +228,13 @@ function omid_per_page_query( $query ) {
     if ( $query->is_main_query() && ! $query->is_feed() && ! is_admin() && $is_post_type && is_post_type_archive() ) {
         $query->set( 'posts_per_page', '80' ); //Change this number to anything you like.
     }
+
+}
+
+
+function omid_the_top_list_gallery_items( $type = "services" ){
+
+
 
 }
 
