@@ -187,6 +187,14 @@ a:active {
     margin: 0 -5px;
 }
 
+.general-separator.sm:before {
+    width: 8px;
+    height: 8px;
+    border-width: 2px;
+    top: -4px;
+    margin: 0 -4px;
+}
+
 
 /* ------- Divider Link  &  Divider Heading ------- */
 
@@ -1205,18 +1213,176 @@ p:empty {
 
 /**************************/
 
+.about-gallery-wrapper  .about-gallery-item { 
+    text-align: center;
+}
+
+.about-gallery-wrapper  .about-gallery-item .tme-wrapper {
+    border: 2px solid #121212;
+    padding: 3px; 
+	display: inline-block;
+	vertical-align: top;
+	margin: 0;
+}
+
+.about-gallery-wrapper  .about-gallery-item .tme-img {
+	position: relative;
+	overflow: hidden;
+}
+
+.about-gallery-wrapper  .about-gallery-item .tme-img img {
+    display: block;
+    border: 1px solid #121212;
+    margin: 0;
+}
+
+.about-gallery-wrapper  .about-gallery-item .tme-img .info {
+    content: "";
+    position: absolute;
+    top: auto;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    width: 100%;
+    height: 70%;
+    display: block;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -ms-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+    background: transparent;
+    -webkit-transform: translateY(100%);
+    -moz-transform: translateY(100%);
+    -ms-transform: translateY(100%);
+    -o-transform: translateY(100%);
+    transform: translateY(100%);
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.about-gallery-wrapper .about-gallery-item:hover .tme-img .info {
+    opacity: 1;
+    -webkit-transform: translateY(0%);
+    -moz-transform: translateY(0%);
+    -ms-transform: translateY(0%);
+    -o-transform: translateY(0%);
+    transform: translateY(0%); 
+}
+
+.about-gallery-wrapper .about-gallery-item .divider-link {
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.about-gallery-wrapper .about-gallery-item .divider-content:before, 
+.about-gallery-wrapper .about-gallery-item .divider-content:after {
+    border-top: 1px solid #bf1e30;
+}
+
+.about-gallery-wrapper .about-gallery-item .divider-link button {
+    border: 1px solid #bf1e30;
+    background-color: transparent;
+    position: relative;
+}
+
+.about-gallery-wrapper .about-gallery-item .divider-link button * {
+    color: #ddd;
+    font-weight: normal;
+}
+
+.about-gallery-wrapper .about-gallery-item .divider-link button:before {
+    content: "";
+    height: 50%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: block;
+    position: absolute;
+    bottom: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.about-gallery-wrapper .about-gallery-item .divider-link button * {
+    position: relative;
+    z-index: 2;
+}
+
+.about-gallery-wrapper .about-gallery-item .general-separator:before {
+    border-color: #000;
+    background: #bf1e30;
+    box-shadow: 0 0 0 1px #aaa;
+}
+
+.about-gallery-wrapper .about-gallery-item .general-separator {
+    border-color: #aaa;
+    max-width: 80px;
+    margin: 0 auto;
+}
+
+.about-gallery-wrapper .about-gallery-item .info-content {
+    padding: 20px 30px 30px;
+    color: #ddd;
+    text-align: center;
+}
+
+.about-gallery-wrapper .about-gallery-item .info-content * {
+    margin: 0; 
+    padding: 0;
+}
 
 
+.about-gallery-wrapper-inner ,
+.about-gallery-wrapper {
+	position: relative;
+}
+
+.about-gallery-wrapper-inner:after,
+.about-gallery-wrapper-inner:before,
+.about-gallery-wrapper:after ,
+.about-gallery-wrapper:before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    border: 2px solid #212121;
+    display: block;
+    position: absolute;
+}
 
 
+.about-gallery-wrapper-inner:after {
+	bottom: -20px;
+	right: -20px;
+	border-top: 0 none;
+	border-left: 0 none;
+}
 
+.about-gallery-wrapper-inner:before {
+	bottom: -20px;
+	left: -20px;
+	border-top: 0 none;
+	border-right: 0 none;
+}
 
+.about-gallery-wrapper:after {
+	right: -20px;
+	top: -20px;
+	border-left: 0 none;
+	border-bottom: 0 none;
+}
 
-
-
-
-
-
-
-
+.about-gallery-wrapper:before {
+	top: -20px;
+	left: -20px;
+	border-right: 0 none;
+	border-bottom: 0 none;
+}
 
