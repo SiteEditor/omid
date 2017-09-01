@@ -92,6 +92,12 @@ function sed_omid_add_modules( $modules ){
     $module_name = "themes/omid/site-editor/modules/in-btn-back/in-btn-back.php";
     $modules[$module_name ] = $sed_pb_modules->get_module_data(get_stylesheet_directory() . '/site-editor/modules/in-btn-back/in-btn-back.php', true, true);
 
+    $module_name = "themes/omid/site-editor/modules/services/services.php";
+    $modules[$module_name ] = $sed_pb_modules->get_module_data(get_stylesheet_directory() . '/site-editor/modules/services/services.php', true, true);
+
+    $module_name = "themes/omid/site-editor/modules/gallery/gallery.php";
+    $modules[$module_name ] = $sed_pb_modules->get_module_data(get_stylesheet_directory() . '/site-editor/modules/gallery/gallery.php', true, true);
+
     return $modules;
 
 }

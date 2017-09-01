@@ -20,13 +20,13 @@
                 //mobileFirst         : true ,
                 arrows              : true,
                 slidesToShow        : 3,
-                slidesToScroll      : 3,
+                slidesToScroll      : 1,
                 dots                : false,
                 //centerMode          : false,
                 rtl                 : $rtl,
                 //swipe               : true ,
                 touchMove           : true ,
-                infinite            : false,
+                infinite            : true,
                 prevArrow : '<span class="slide-nav-bt slide-prev"></span>',
                 nextArrow : '<span class="slide-nav-bt slide-next"></span>',
 
@@ -35,7 +35,7 @@
                     breakpoint: 910,
                     settings: {
                       slidesToShow: 2,
-                      slidesToScroll: 2,
+                      slidesToScroll: 1,
                       infinite: true,
                       dots: true
                     }

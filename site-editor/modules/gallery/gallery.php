@@ -1,30 +1,30 @@
 <?php
 /*
-Module Name: Omid Services
+Module Name: Omid Gallery
 Module URI: http://www.siteeditor.org/modules/omid-services
-Description: Module Omid Services For Page Builder Application
+Description: Module Omid Gallery For Page Builder Application
 Author: Site Editor Team
 Author URI: http://www.siteeditor.org
 Version: 1.0.0
 */
 
 /**
- * Class PBOmidServicesShortcode
+ * Class PBOmidGalleryShortcode
  */
-class PBOmidServicesShortcode extends PBShortcodeClass{
+class PBOmidGalleryShortcode extends PBShortcodeClass{
 
     /**
      * Register module with siteeditor.
      */
     function __construct() {
         parent::__construct( array(
-                "name"        => "sed_omid_services",                               //*require
-                "title"       => __("Omid Services","site-editor"),                 //*require for toolbar
-                "description" => __("List of Omid Services","site-editor"),
-                "icon"        => "icon-services",                               //*require for icon toolbar
-                "module"      =>  "services"         //*require
-                //"is_child"    =>  "false"       //for childe shortcodes like sed_tr , sed_td for table module
-            ) // Args
+            "name"        => "sed_omid_gallery",                               //*require
+            "title"       => __("Omid Gallery","site-editor"),                 //*require for toolbar
+            "description" => __("List of Omid Gallery","site-editor"),
+            "icon"        => "icon-gallery",                               //*require for icon toolbar
+            "module"      =>  "gallery"         //*require
+            //"is_child"    =>  "false"       //for childe shortcodes like sed_tr , sed_td for table module
+        ) // Args
         );
 
     }
@@ -43,28 +43,12 @@ class PBOmidServicesShortcode extends PBShortcodeClass{
 
         extract( $atts );
 
-        $args = array(
-            'post_type'         =>  'omid_gallery',
-            'offset'            =>  0 ,
-            'posts_per_page'    =>  -1,
-            'meta_query' => array(
-                array(
-                    'key'     => 'show_in_services',
-                    'value'   => '1'
-                ),
-            ),
-        );
-
-        $args = apply_filters( 'sed_omid_services_module_query_args_filter' , $args , $this );
-
-        $this->set_vars( array( "args" => $args ) );
-
     }
 
     function shortcode_settings(){
 
         /*$this->add_panel( 'omid_services_settings_panel' , array(
-            'title'               =>  __('Omid Services Settings',"site-editor")  ,
+            'title'               =>  __('Omid Gallery Settings',"site-editor")  ,
             'capability'          => 'edit_theme_options' ,
             'type'                => 'inner_box' ,
             'priority'            => 9 ,
@@ -97,18 +81,18 @@ class PBOmidServicesShortcode extends PBShortcodeClass{
 
 }
 
-new PBOmidServicesShortcode();
+new PBOmidGalleryShortcode();
 
-global $sed_pb_app;                      
+global $sed_pb_app;
 
 $sed_pb_app->register_module(array(
     "group"                 =>  "basic" ,
-    "name"                  =>  "services",
-    "title"                 =>  __("Omid Services","site-editor"),
-    "description"           =>  __("List of Omid Services","site-editor"),
-    "icon"                  =>  "icon-services",
+    "name"                  =>  "gallery",
+    "title"                 =>  __("Omid Gallery","site-editor"),
+    "description"           =>  __("List of Omid Gallery","site-editor"),
+    "icon"                  =>  "icon-gallery",
     "type_icon"             =>  "font",
-    "shortcode"             =>  "sed_omid_services",
+    "shortcode"             =>  "sed_omid_gallery",
     //"priority"              =>  10 ,
     "transport"             =>  "ajax" ,
 ));

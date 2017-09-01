@@ -23,15 +23,15 @@ get_header(); ?>
 					?>
 					<?php
 
-					var_dump( get_field('omid_images_gallery') );
+					//var_dump( get_field('omid_images_gallery') );
 
-					var_dump( get_post_meta( get_the_ID() , 'omid_images_gallery' , true ) );
+					//var_dump( get_post_meta( get_the_ID() , 'omid_images_gallery' , true ) );
 
-					var_dump( get_field('show_in_services') );
+					var_dump( get_post_meta( get_the_ID() , 'show_in_services' , true ) );
 
-					var_dump( get_field('show_in_top_services') );
+					//var_dump( get_field('show_in_top_services') );
 
-					var_dump( get_field('show_in_top_galery') );
+					//var_dump( get_field('show_in_top_galery') );
 
 					?>
 					<?php
