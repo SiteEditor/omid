@@ -98,6 +98,9 @@ function sed_omid_add_modules( $modules ){
     $module_name = "themes/omid/site-editor/modules/gallery/gallery.php";
     $modules[$module_name ] = $sed_pb_modules->get_module_data(get_stylesheet_directory() . '/site-editor/modules/gallery/gallery.php', true, true);
 
+    $module_name = "themes/omid/site-editor/modules/posts/posts.php";
+    $modules[$module_name ] = $sed_pb_modules->get_module_data(get_stylesheet_directory() . '/site-editor/modules/posts/posts.php', true, true);
+
     return $modules;
 
 }
