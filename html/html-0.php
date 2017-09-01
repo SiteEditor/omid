@@ -210,6 +210,34 @@
 </div>    
 
 
+<!--============================================-->
+<div class="single-video-wrapper">
+	<div class="video-slider-wrapper">
+
+	    <div class="video-slider-item active">
+	        <div class="tme-wrapper">
+	            <div class="tme-img">
+	                <img src="http://localhost/rang/wp-content/uploads/2017/05/8.jpg" alt="About Me">
+	                <div class="tme-img-info">
+						<a class="play-btn" href=""></a>
+	                </div>
+	            </div>
+	        </div>  
+	    </div> 
+
+	</div>  
+
+	<div class="video-cat-wrapper">
+		<div class="video-cat-item"><a href="" class="">Donec quam felis</a></div>
+		<div class="video-cat-item active"><a href="" class="">Donec quam felis</a></div>
+		<div class="video-cat-item"><a href="" class="">Donec quam felis</a></div>
+		<div class="video-cat-item"><a href="" class="">Donec quam felis</a></div>
+		<div class="video-cat-item"><a href="" class="">Donec quam felis</a></div>
+	</div> 
+
+</div>    
+
+
 
 
 
