@@ -112,6 +112,55 @@
 
         });
 
+
+
+        $(".gallery-slider-wrapper").livequery(function(){
+
+            $(this).slick({ 
+                rtl                 : $rtl, 
+                slidesToShow        : 3,
+                slidesToScroll      : 1,
+                arrows              : true,
+                dots                : false,
+                centerMode          : true,
+                centerPadding       : '110px',
+                focusOnSelect       : true,
+                prevArrow : '<span class="slide-nav-bt slide-prev"></span>',
+                nextArrow : '<span class="slide-nav-bt slide-next"></span>',
+
+                responsive: [
+                  {
+                    breakpoint: 910,
+                    settings: {
+                      slidesToShow: 2,
+                      slidesToScroll: 2,
+                      infinite: true,
+                      dots: true
+                    }
+                  },
+                  {
+                    breakpoint: 600,
+                    settings: {
+                      slidesToShow: 1,
+                      slidesToScroll: 1
+                    }
+                  },
+                  {
+                    breakpoint: 480,
+                    settings: {
+                      slidesToShow: 1,
+                      slidesToScroll: 1
+                    }
+                  }
+                  // You can unslick at a given breakpoint now by adding:
+                  // settings: "unslick"
+                  // instead of a settings object
+                ]
+
+            });
+
+        });
+
         /**
          * Resize
          

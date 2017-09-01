@@ -151,35 +151,62 @@
 </div> 
 
 <!--============================================-->
-<div class="about-gallery-wrapper">
-	<div class="about-gallery-wrapper-inner">
+<div class="box-with-corner">
+	<div class="box-with-corner-inner">
 
-	    <div class="about-gallery-item">
-	        <div class="tme-wrapper">
-	            <div class="tme-img">
-	                <img src="http://localhost/rang/wp-content/uploads/2017/05/8.jpg" alt="About Me">
-	                <div class="info">
-		                <div class="info-inner">	
+	    <div class="about-gallery-wrapper">
 
-							<div class="divider-link">
-								<span class="divider-content">
-									<button><a href="" class="">Read More</a></button>
-								</span>     
-							</div>
+		    <div class="about-gallery-item">
+		        <div class="tme-wrapper">
+		            <div class="tme-img">
+		                <img src="http://localhost/rang/wp-content/uploads/2017/05/8.jpg" alt="About Me">
+		                <div class="info">
+			                <div class="info-inner">	
 
-			                <div class="general-separator sm"></div>
+								<div class="divider-link">
+									<span class="divider-content">
+										<button><a href="" class="">Read More</a></button>
+									</span>     
+								</div>
 
-			                <div class="info-content">
-			                    <p>Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim donec pede justo.</p>
-			                </div>
+				                <div class="general-separator sm"></div>
 
-		                </div>                	
-	                </div>
-	            </div>
-	        </div>  
+				                <div class="info-content">
+				                    <p>Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim donec pede justo.</p>
+				                </div>
+
+			                </div>                	
+		                </div>
+		            </div>
+		        </div>  
+		    </div> 
+
 	    </div> 
   
     </div> 
+</div>  
+
+
+<!--============================================-->
+<div class="gallery-slider-wrapper">
+
+    <div class="gallery-slider-item">
+        <div class="tme-wrapper">
+            <div class="tme-img">
+                <img src="http://localhost/rang/wp-content/uploads/2017/05/8.jpg" alt="About Me">
+                <div class="info">
+
+	                <div class="box-with-corner">
+						<div class="box-with-corner-inner">
+							<a class="lightbox-btn" href=""></a>
+						</div>                	
+                	</div>
+
+                </div>
+            </div>
+        </div>  
+    </div> 
+
 </div>    
 
 
