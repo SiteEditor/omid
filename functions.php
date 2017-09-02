@@ -249,6 +249,7 @@ function omid_the_top_list_gallery_items( $current_id , $type = "services" ){
         'post_type'         =>  'omid_gallery',
         'offset'            =>  0 ,
         'posts_per_page'    =>  -1,
+        'post_status'       => 'publish',
         'meta_query' => array(
             array(
                 'key'     => $key ,

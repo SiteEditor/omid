@@ -18,13 +18,13 @@ class PBPostsShortcode extends PBShortcodeClass{
      */
     function __construct() {
         parent::__construct( array(
-                "name"        => "sed_posts",                               //*require
-                "title"       => __("Posts","site-editor"),                 //*require for toolbar
-                "description" => __("List of posts for built-in and custom post types","site-editor"),
-                "icon"        => "icon-posts",                               //*require for icon toolbar
-                "module"      =>  "posts"         //*require
-                //"is_child"    =>  "false"       //for childe shortcodes like sed_tr , sed_td for table module
-            ) // Args
+            "name"        => "sed_posts",                               //*require
+            "title"       => __("Posts","site-editor"),                 //*require for toolbar
+            "description" => __("List of posts for built-in and custom post types","site-editor"),
+            "icon"        => "icon-posts",                               //*require for icon toolbar
+            "module"      =>  "posts"         //*require
+            //"is_child"    =>  "false"       //for childe shortcodes like sed_tr , sed_td for table module
+        ) // Args
         );
 
     }
@@ -34,6 +34,7 @@ class PBPostsShortcode extends PBShortcodeClass{
         $atts = array(
             //'title_length'          => 50,
             'show_title'                    => true,
+            'show_only_featured_posts'      => false,
             'title'                         => '',
             'excerpt_length'                => 50,
             'posts_per_page'                => 5,
@@ -80,15 +81,23 @@ class PBPostsShortcode extends PBShortcodeClass{
 
         }
 
+        if( $show_only_featured_posts ){
+
+            $args['meta_key']    = '_is_ns_featured_post';
+
+            $args['meta_value']  = 'yes';
+
+        }
+
         $args = apply_filters( 'sed_posts_module_query_args_filter' , $args , $this );
 
         $this->set_vars( array( "args" => $args ) );
 
     }
-    
+
     function styles(){
         return array(
-            array('posts-skin-default', get_stylesheet_directory_uri().'/site-editor/modules/posts/skins/default/css/style.css' ,'1.0.0' ) ,
+            //array('posts-skin-default', get_stylesheet_directory_uri().'/site-editor/modules/posts/skins/default/css/style.css' ,'1.0.0' ) ,
         );
     }
 
@@ -255,6 +264,20 @@ class PBPostsShortcode extends PBShortcodeClass{
 
         }
 
+        if( class_exists('NS_Featured_Posts') ){
+
+            $params['show_only_featured_posts'] = array(
+                'label'             => __('Show Only Featured Posts', 'site-editor'),
+                'type'              => 'switch',
+                'choices'           => array(
+                    "on"       =>    "ON" ,
+                    "off"      =>    "OFF" ,
+                ),
+                "panel"         => "posts_settings_panel" ,
+            );
+
+        }
+
         $params['skin'] = array(
             "type"                => "skin" ,
             "label"               => __("Change skin", "site-editor"),
@@ -288,7 +311,7 @@ class PBPostsShortcode extends PBShortcodeClass{
 
 new PBPostsShortcode();
 
-global $sed_pb_app;                      
+global $sed_pb_app;
 
 $sed_pb_app->register_module(array(
     "group"                 =>  "basic" ,
