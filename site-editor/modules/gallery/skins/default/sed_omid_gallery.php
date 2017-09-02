@@ -33,7 +33,7 @@
                             $attachment_full_src = sed_placeholder_img_src();
                         }
 
-                        $title = $item['gallery_image_single_title'];
+                        $title =  apply_filters( 'the_title' , $item['gallery_image_single_title'] );
 
                         ?>
 

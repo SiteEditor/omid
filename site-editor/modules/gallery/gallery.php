@@ -60,6 +60,16 @@ class PBOmidGalleryShortcode extends PBShortcodeClass{
 
         $params = array();
 
+        $params['skin'] = array(
+            "type"                => "skin" ,
+            "label"               => __("Change skin", "site-editor"),
+            'button_style'        => 'menu' ,
+            'has_border_box'      => false ,
+            'icon'                => 'sedico-change-skin' ,
+            'field_spacing'       => 'sm' ,
+            'priority'            => 540
+        );
+
         $params['animation'] =  array(
             "type"                => "animation" ,
             "label"               => __("Animation Settings", "site-editor"),
