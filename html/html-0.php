@@ -188,26 +188,56 @@
 
 
 <!--============================================-->
-<div class="gallery-slider-wrapper">
+<div class="single-gallery-wrapper">
 
-    <div class="gallery-slider-item">
-        <div class="tme-wrapper">
-            <div class="tme-img">
-                <img src="http://localhost/rang/wp-content/uploads/2017/05/8.jpg" alt="About Me">
-                <div class="info">
+    <div class="single-gallery-content">
 
-	                <div class="box-with-corner">
-						<div class="box-with-corner-inner">
-							<a class="lightbox-btn" href=""></a>
-						</div>                	
-                	</div>
-
-                </div>
+        <div class="single-heading">
+            <div class="single-heading-inner">
+                <h4>Donec quam felis</h4>
             </div>
-        </div>  
+        </div>
+
+        <div class="general-separator"></div>	
+
+        <div class="single-cat-wrapper">
+			<div class="single-cat-item active"><a href="" class="">Donec quam felis</a></div>
+			<div class="single-cat-item"><a href="" class="">Donec quam felis</a></div>
+			<div class="single-cat-item"><a href="" class="">Donec quam felis</a></div>
+			<div class="single-cat-item"><a href="" class="">Donec quam felis</a></div>
+			<div class="single-cat-item"><a href="" class="">Donec quam felis</a></div>
+		</div> 
+
+        <div class="single-content">
+            <div class="single-content-inner">
+
+				<div class="gallery-slider-wrapper">
+
+				    <div class="gallery-slider-item">
+				        <div class="tme-wrapper">
+				            <div class="tme-img">
+				                <img src="http://localhost/rang/wp-content/uploads/2017/05/8.jpg" alt="About Me">
+				                <div class="info">
+
+					                <div class="box-with-corner">
+										<div class="box-with-corner-inner">
+											<a class="lightbox-btn" href=""></a>
+										</div>                	
+				                	</div>
+
+				                </div>
+				            </div>
+				        </div>  
+				    </div> 
+
+				</div>  
+				
+            </div>
+        </div>
+
     </div> 
 
-</div>    
+</div> 
 
 
 <!--============================================-->

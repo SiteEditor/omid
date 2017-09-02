@@ -1754,6 +1754,11 @@ p:empty {
     text-align: center;
 }
 
+.single-gallery-wrapper {
+	text-align: center;
+}
+
+.single-gallery-wrapper .single-heading h4 و
 .single-services-wrapper .single-heading h4 {
     font-size: 15px;
     margin-bottom: 13px;
@@ -1761,6 +1766,7 @@ p:empty {
     display: block;
 }
 
+.single-gallery-wrapper .general-separator و
 .single-services-wrapper .general-separator {
     max-width: 300px;
 }
