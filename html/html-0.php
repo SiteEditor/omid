@@ -314,6 +314,73 @@
     </div>  
 </div>  
 
+<!--============================================-->
 
+<div class="single-services-container">
 
+	<div class="box-with-corner">
+		<div class="box-with-corner-inner">
+
+		    <div class="single-services-wrapper">
+
+			    <div class="single-services-content">
+
+			        <div class="single-heading">
+			            <div class="single-heading-inner">
+			                <h4>Donec quam felis</h4>
+			            </div>
+			        </div>
+
+			        <div class="general-separator"></div>	
+
+			        <div class="single-cat-wrapper">
+						<div class="single-cat-item active"><a href="" class="">Donec quam felis</a></div>
+						<div class="single-cat-item"><a href="" class="">Donec quam felis</a></div>
+						<div class="single-cat-item"><a href="" class="">Donec quam felis</a></div>
+						<div class="single-cat-item"><a href="" class="">Donec quam felis</a></div>
+						<div class="single-cat-item"><a href="" class="">Donec quam felis</a></div>
+					</div> 
+
+			        <div class="single-content">
+			            <div class="single-content-inner">
+			                <p>Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim donec pede justo. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim donec pede justo.Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim donec pede justo.Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim donec pede justo.Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim donec pede justo.</p>
+			            </div>
+			        </div>
+
+			    </div> 
+
+		    </div> 
+	  
+	    </div> 
+	</div>  
+
+	<div class="single-services-gallery-wrapper">
+
+		<div class="row single-services-gallery-inner">
+		    <div class="single-services-gallery-item col-sm-4">
+		        <div class="tme-img">
+		            <img src="http://localhost/rang/wp-content/uploads/2017/05/8.jpg" alt="About Me">
+		        </div> 
+		    </div> 
+		    <div class="single-services-gallery-item col-sm-4">
+		        <div class="tme-img">
+		            <img src="http://localhost/rang/wp-content/uploads/2017/05/8.jpg" alt="About Me">
+		        </div> 
+		    </div> 
+		    <div class="single-services-gallery-item col-sm-4">
+		        <div class="tme-img">
+		            <img src="http://localhost/rang/wp-content/uploads/2017/05/8.jpg" alt="About Me">
+		        </div> 
+		    </div> 
+		</div> 
+
+		<div class="divider-link">
+			<span class="divider-content">
+				<button><a href="" class="">Read More</a></button>
+			</span>     
+		</div>		
+
+	</div>  
+
+</div> 
 
