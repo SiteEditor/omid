@@ -35,7 +35,21 @@
 						</div>
 
 						<div class="tme-name">
-							<h5> <?php wpmtst_the_client(); ?> </h5>
+
+							<h5>
+
+								<?php
+
+								$name = get_post_meta( get_the_ID() , 'client_name', true );
+
+								$family = get_post_meta( get_the_ID() , 'client_last_name', true );
+
+								echo $name . " " . $family;
+
+								?>
+
+							</h5>
+
 						</div>
 
 					</div>
@@ -53,7 +67,7 @@
 
 		<div class="divider-link">
 			<span class="divider-content">
-				<button><a href="" class=""><?php echo __("Enter To Testimonial Form");?></a></button>
+				<button><a href="<?php echo esc_attr( esc_url( site_url( '/about_us#wpmtst-form' ) ) ); ?>" class=""><?php echo __("Enter To Testimonial Form");?></a></button>
 			</span>
 		</div>
 

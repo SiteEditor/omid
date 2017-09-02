@@ -16,38 +16,69 @@
 
                 <?php wpmtst_form_setup(); ?>
 
-                <?php do_action( 'wpmtst_form_before_fields' ); ?>
+                <div class="row">
 
-                <?php
+                    <?php do_action( 'wpmtst_form_before_fields' ); ?>
 
-                $fields = wpmtst_get_form_fields( WPMST()->atts( 'form_id' ) );
+                    <div class="col-sm-6">
 
-                $num = 1;
+                        <?php
 
-                foreach ( $fields as $key => $field ) {
+                        $fields = wpmtst_get_form_fields( WPMST()->atts( 'form_id' ) );
 
-                    if( $num == 1 ){
+                        $num = 1;
 
-                    }
+                        foreach ( $fields as $key => $field ) {
 
-                    wpmtst_single_form_field( $field );
+                            if( $num == 1 ){
 
-                    if( $num == 2 ){
+                                ?>
+                                <div class="row">
 
-                    }
+                                    <div class="col-sm-6">
 
-                    if( $num == 4 ){
+                                <?php
 
-                    }
+                            }
 
-                    $num++;
-                }
+                            wpmtst_single_form_field( $field );
 
-                ?>
+                            if( $num == 1 ){
 
-                <?php do_action( 'wpmtst_form_after_fields' ); ?>
+                                ?>
+                                    </div>
 
-                <?php wpmtst_form_submit_button(); ?>
+                                    <div class="col-sm-6">
+
+                                <?php
+
+                            }
+
+                            if( $num == 2 ){
+
+                                ?>
+
+                                    </div>
+                                </div>
+                                <?php
+                            }
+
+                            if( $num == 4 ){
+                                echo '</div><div class="col-sm-6">';
+                            }
+
+                            $num++;
+                        }
+
+                        ?>
+
+                        <?php wpmtst_form_submit_button(); ?>
+
+                    </div>
+
+                    <?php do_action( 'wpmtst_form_after_fields' ); ?>
+
+                </div>
 
             </form>
 
