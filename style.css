@@ -1830,4 +1830,61 @@ p:empty {
 
 
 
+/***********************************/
 
+div#mep_0 {
+    width: 1300px !important;
+    height: 500px !important;
+}
+
+body .mejs-offscreen {
+    clip: inherit;
+    clip: inherit;
+    clip-path: none;
+}    
+
+body .mejs-container,  
+body .mejs-embed, 
+body .mejs-embed body {  
+    background: #ebe0de; 
+}  
+
+body .mejs-container .mejs-controls {
+    background-color: transparent;
+    height: 40px;
+    padding: 0 15px;
+}
+
+body .mejs-controls .mejs-time-rail .mejs-time-total {
+    margin: 9px 5px;
+}    
+
+body .mejs-container .mejs-controls .mejs-time {
+    color: #949496;
+}  
+
+body .mejs-controls .mejs-time-rail .mejs-time-current {
+    background: #bf1e30;
+}
+
+body .mejs-controls .mejs-time-rail .mejs-time-loaded {
+	background: #949496;
+}
+
+body .mejs-controls .mejs-time-rail span, 
+body .mejs-controls .mejs-time-rail a {
+    height: 2px;	
+}
+
+body .mejs-controls .mejs-time-rail .mejs-time-current {
+    height: 6px;
+    margin-top: -2px;
+}
+
+body .mejs-controls .mejs-button button {
+	background-image: url(images/controls.svg);
+}
+
+body .mejs-overlay-button {
+    background-image: url(images/bigplay.svg);
+}
