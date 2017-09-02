@@ -241,10 +241,73 @@ function omid_per_page_query( $query ) {
 }
 
 
-function omid_the_top_list_gallery_items( $type = "services" ){
+function omid_the_top_list_gallery_items( $current_id , $type = "services" ){
 
+    $key = ( $type == "services" ) ? "show_in_top_services" : "show_in_top_galery";
 
+    $args = array(
+        'post_type'         =>  'omid_gallery',
+        'offset'            =>  0 ,
+        'posts_per_page'    =>  -1,
+        'meta_query' => array(
+            array(
+                'key'     => $key ,
+                'value'   => '1'
+            ),
+        ),
+    );
 
+    $custom_query = new WP_Query( $args );
+
+    if ( $custom_query->have_posts() ) {
+
+        ?>
+
+        <div class="single-cat-wrapper">
+
+            <?php
+            // Start the Loop.
+            while ( $custom_query->have_posts() ){
+
+                $custom_query->the_post();
+
+                $class = $current_id == get_the_ID() ? "active" : "";
+
+                $link = get_permalink();
+
+                if( $type == "services" ) {
+
+                    $link = esc_url( add_query_arg( 'is_service', '1', $link ) );
+
+                }
+
+                ?>
+
+                <div class="single-cat-item <?php echo esc_attr( $class );?>"><a href="<?php echo $link;?>" class=""><?php the_title();?></a></div>
+
+                <?php
+
+            }
+
+            ?>
+
+        </div>
+
+        <?php
+
+        wp_reset_postdata();
+
+    }else{ ?>
+
+        <div class="not-found-post">
+            <p><?php echo __("Not found result" , "site-editor" ); ?> </p>
+        </div>
+
+        <?php
+
+    }
+
+    wp_reset_query();
 }
 
 

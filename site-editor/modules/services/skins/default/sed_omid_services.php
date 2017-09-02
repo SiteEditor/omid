@@ -37,7 +37,7 @@
 
                     <div class="tme-wrapper">
 
-                        <a href="<?php echo get_permalink();?>">
+                        <a href="<?php echo esc_url( add_query_arg( 'is_service', '1', get_permalink() ) );?>">
 
                             <div class="tme-heading">
                                 <div class="tme-heading-inner">

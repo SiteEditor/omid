@@ -10,83 +10,97 @@
  * @version 1.2
  */
 
+$gallery = get_field('omid_images_gallery');
 
-//
-
-$post_gallery = get_post_meta( get_the_ID() , 'wpcf-sed-images-gallery' , false );
-$post_gallery = array_filter($post_gallery);
+$lightbox_id = "omid_images_gallery_single_page";
 
 ?>
 
-<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>> 
+<div id="post-<?php the_ID(); ?>" <?php post_class("single-gallery-wrapper"); ?>>
 
-	<div class="custom-post-type-single">
-	    <div class="single-wrapper">
+	<div class="single-gallery-content">
 
-		    <div class="single-slider-wrapper-outer">
+		<div class="single-heading">
+			<div class="single-heading-inner">
+				<h4>
+					<?php
+					$in_top = get_field('show_in_top_services');
 
-		        <div class="single-slider-wrapper">
+					if( $in_top ){
+						_e( 'Images Gallery' , 'omid' );
+					}else{
+						the_title();
+					}
+					?>
+				</h4>
+			</div>
+		</div>
 
-			        <!--<div class="single-img">        	
-			        	<?php //if ( '' !== get_the_post_thumbnail() ) : ?>
-			                <?php //the_post_thumbnail( 'twentyseventeen-featured-image' ); ?>
-			            <?php //endif; ?>
-			        </div>-->                                    
-			        <?php
+		<div class="general-separator"></div>
 
-			        if ( '' !== get_the_post_thumbnail() ) : 
+		<?php omid_the_top_list_gallery_items( get_the_ID() , "gallery" );?>
 
-			        	$thumbnail = get_the_post_thumbnail_url();
+		<div class="single-content">
+			<div class="single-content-inner">
 
-			        	array_unshift($post_gallery,$thumbnail); 
+				<div class="gallery-slider-wrapper">
 
-			    	endif;
+					<?php  //var_dump( $gallery );
+					$num = 1;
 
-		            foreach ( $post_gallery As $image_url ) {
+					foreach( $gallery AS $attachment ) {
 
-		                $attachment_id = sed_theme_get_attachment_id_by_url( $image_url );
+						$attachment_id = $attachment['id'];
 
-		                $img = get_sed_attachment_image_html( $attachment_id , '' , 'full' );
+						$img = get_sed_attachment_image_html( $attachment_id , "" , "289X289" );
 
-		                if ( ! $img ) {
-		                    $img = array();
-		                    $img['thumbnail'] = '<img class="sed-image-placeholder sed-image" src="' . sed_placeholder_img_src() . '" />';
-		                }
+						$attachment_full_src = wp_get_attachment_image_src( $attachment_id , 'full' );
 
-		                ?>
-		                <div class="slide-item">
+						$attachment_full_src = $attachment_full_src[0];
 
-		                    <?php echo $img['thumbnail'];?>
+						if ( ! $img ) {
+							$img = array();
+							$img['thumbnail'] = '<img class="sed-image-placeholder sed-image" src="' . sed_placeholder_img_src() . '" />';
+						}
 
-		                </div>
-		                <?php
+						if ( ! $attachment_full_src ) {
+							$attachment_full_src = sed_placeholder_img_src();
+						}
 
-		            }
-		            ?>
+						$title = isset( $attachment['title'] ) && !empty( $attachment['title'] ) ? $attachment['title'] : "";
 
-	            </div>
+						?>
+						<div class="gallery-slider-item">
+							<div class="tme-wrapper">
+								<div class="tme-img">
 
-		        <div class="single-content">
-		            <div class="single-content-inner">
-						<div class="single-heading">
-				            <h4><?php the_title(); ?></h4>
-				        </div>
-						<div>  
-							<?php
-								/* translators: %s: Name of current post */
-								the_content( sprintf(
-									__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'twentyseventeen' ),
-									get_the_title()
-								) );
-							?>
-						</div><!-- the_content -->     
-		            </div>
-		            <a class="single-home-url" href="<?php echo esc_url( home_url( '/' ) ); ?>"> <?php echo __('Back', 'twentyseventeen'); ?> <i class="fa fa-angle-left"></i> </a>
-		        </div>
-		        
-		    </div>  
+									<?php echo $img['thumbnail'];?>
 
-	    </div>  
-	</div>  
+									<div class="info">
 
-</div><!-- #post-## -->         
+										<div class="box-with-corner">
+											<div class="box-with-corner-inner">
+												<a class="lightbox-btn" href="<?php echo $attachment_full_src;?>" data-lightbox="<?php if( !empty($lightbox_id) ) echo $lightbox_id;else echo "sed-lightbox";?>" data-title="<?php echo $title;?>" title="<?php echo $title;?>">
+
+												</a>
+											</div>
+										</div>
+
+									</div>
+								</div>
+							</div>
+						</div>
+						<?php
+
+						$num++;
+					}
+					?>
+
+				</div>
+
+			</div>
+		</div>
+
+	</div>
+
+</div> <!-- #post-## -->
