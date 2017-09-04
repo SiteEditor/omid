@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Mafiran Project\n"
-"POT-Creation-Date: 2017-07-23 13:18+0430\n"
-"PO-Revision-Date: 2017-07-23 13:18+0430\n"
+"Project-Id-Version: Omid Project\n"
+"POT-Creation-Date: 2017-09-04 08:38+0430\n"
+"PO-Revision-Date: 2017-09-04 08:44+0430\n"
 "Last-Translator: \n"
 "Language-Team: Site Editor Team <info@siteeditor.org>\n"
 "Language: fa_IR\n"
@@ -19,167 +19,233 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
-#: archive-product.php:55
-msgid "Products"
-msgstr "محصولات"
+#: archive-omid_video.php:187
+#: template-parts/custom-post-type/single-post-video.php:108
+msgid "All"
+msgstr "همه"
 
-#: archive-product.php:139 archive-project.php:85 archive-service.php:156
-msgid "Previous page"
-msgstr "صفحه قبلی"
+#: archive.php:119 template-parts/custom-post-type/single-post.php:42
+msgid "Updated On:"
+msgstr "به روز رسانی در تاریخ"
 
-#: archive-product.php:140 archive-project.php:86 archive-service.php:157
-msgid "Next page"
-msgstr "صفحه بعدی"
+#: archive.php:126
+msgid "Read More"
+msgstr "بیشتر بخوانید"
 
-#: archive-product.php:141 archive-project.php:87 archive-service.php:158
-msgid "Page"
-msgstr "برگه"
+#: archive.php:165 functions.php:304
+#: site-editor/modules/gallery/skins/carousel/sed_omid_gallery.php:38
+#: site-editor/modules/posts/skins/default/sed_posts.php:42
+#: site-editor/modules/posts/skins/video/sed_posts.php:42
+#: site-editor/modules/services/skins/default/sed_omid_services.php:82
+msgid "Not found result"
+msgstr "نتیجه ای یافت نشد"
 
-#: archive-project.php:7
-msgid "Done Projects"
-msgstr "پروژه های انجام شده"
-
-#: archive-service.php:129
-msgid "Pages:"
+#: functions.php:62
+msgid "Services Menu"
 msgstr ""
 
-#: functions.php:129
-msgid "Product Archive Description"
+#: header.php:36
+msgid "Skip to content"
 msgstr ""
 
-#: functions.php:139
-msgid "Home Page Product Description"
+#: index.php:38
+msgid "Blog"
+msgstr "بلاگ"
+
+#: single.php:69
+msgid "Previous Post"
 msgstr ""
 
-#: single-product.php:82
-msgid "Short Description"
-msgstr "توضیحات کوتاه"
-
-#: single-product.php:97
-msgid "Description"
-msgstr "توضیحات"
-
-#: single-project.php:60
-msgid "Employer:"
-msgstr "کارفرما:"
-
-#: single-project.php:61
-msgid "Date:"
-msgstr "تاریخ:"
-
-#: site-editor/modules/mafiran-products/mafiran-products.php:22
-#: site-editor/modules/mafiran-products/mafiran-products.php:106
-msgid "Mafiran Products"
+#: single.php:69
+msgid "Previous"
 msgstr ""
 
-#: site-editor/modules/mafiran-products/mafiran-products.php:23
-#: site-editor/modules/mafiran-products/mafiran-products.php:107
-msgid "List of mafiran products for built-in and custom post types"
+#: single.php:70
+msgid "Next Post"
 msgstr ""
 
-#: site-editor/modules/mafiran-products/mafiran-products.php:57
-msgid "Mafiran Products Settings"
+#: single.php:70
+msgid "Next"
 msgstr ""
 
-#: site-editor/modules/mafiran-products/mafiran-products.php:79
-#: site-editor/modules/posts/posts.php:270
+#: site-editor/modules/gallery/gallery.php:22
+#: site-editor/modules/gallery/gallery.php:101
+msgid "Omid Gallery"
+msgstr ""
+
+#: site-editor/modules/gallery/gallery.php:23
+#: site-editor/modules/gallery/gallery.php:102
+msgid "List of Omid Gallery"
+msgstr ""
+
+#: site-editor/modules/gallery/gallery.php:65
+#: site-editor/modules/posts/posts.php:283
+msgid "Change skin"
+msgstr ""
+
+#: site-editor/modules/gallery/gallery.php:75
+#: site-editor/modules/in-btn-back/in-btn-back.php:61
+#: site-editor/modules/posts/posts.php:293
+#: site-editor/modules/services/services.php:81
 msgid "Animation Settings"
 msgstr ""
 
-#: site-editor/modules/mafiran-products/mafiran-products.php:89
-#: site-editor/modules/posts/posts.php:280
+#: site-editor/modules/gallery/gallery.php:85
+#: site-editor/modules/in-btn-back/in-btn-back.php:56
+#: site-editor/modules/posts/posts.php:303
+#: site-editor/modules/services/services.php:91
 msgid "Module Wrapper Settings"
 msgstr ""
 
-#: site-editor/modules/mafiran-products/skins/default/sed_mafiran_products.php:87
-msgid "Products..."
-msgstr "محصولات..."
+#: site-editor/modules/in-btn-back/in-btn-back.php:19
+#: site-editor/modules/in-btn-back/in-btn-back.php:20
+#: site-editor/modules/in-btn-back/in-btn-back.php:77
+#: site-editor/modules/in-btn-back/in-btn-back.php:94
+#: site-editor/modules/in-btn-back/in-btn-back.php:95
+msgid "Back To Up"
+msgstr ""
 
 #: site-editor/modules/posts/posts.php:22
-#: site-editor/modules/posts/posts.php:296
+#: site-editor/modules/posts/posts.php:319
 msgid "Posts"
 msgstr ""
 
 #: site-editor/modules/posts/posts.php:23
-#: site-editor/modules/posts/posts.php:297
+#: site-editor/modules/posts/posts.php:320
 msgid "List of posts for built-in and custom post types"
 msgstr ""
 
-#: site-editor/modules/posts/posts.php:98
+#: site-editor/modules/posts/posts.php:107
 msgid "Posts Settings"
 msgstr ""
 
-#: site-editor/modules/posts/posts.php:112
+#: site-editor/modules/posts/posts.php:121
 msgid "Image Size Field"
 msgstr ""
 
-#: site-editor/modules/posts/posts.php:113
+#: site-editor/modules/posts/posts.php:122
 msgid "This option allows you to set a title for your image."
 msgstr ""
 
-#: site-editor/modules/posts/posts.php:118
+#: site-editor/modules/posts/posts.php:127
 msgid "Show Title"
 msgstr ""
 
-#: site-editor/modules/posts/posts.php:129
+#: site-editor/modules/posts/posts.php:138
 msgid "Title"
 msgstr ""
 
-#: site-editor/modules/posts/posts.php:130
+#: site-editor/modules/posts/posts.php:139
 msgid "Module Title"
 msgstr ""
 
-#: site-editor/modules/posts/posts.php:131
+#: site-editor/modules/posts/posts.php:140
 msgid "Enter Module Title"
 msgstr ""
 
-#: site-editor/modules/posts/posts.php:156
+#: site-editor/modules/posts/posts.php:165
 msgid "Select Post Type"
 msgstr ""
 
-#: site-editor/modules/posts/posts.php:157
+#: site-editor/modules/posts/posts.php:166
 msgid "Select Type of Posts"
 msgstr ""
 
-#: site-editor/modules/posts/posts.php:164
+#: site-editor/modules/posts/posts.php:173
 msgid "Offset"
 msgstr ""
 
-#: site-editor/modules/posts/posts.php:165
+#: site-editor/modules/posts/posts.php:174
 msgid "Start Posts Of this offset"
 msgstr ""
 
-#: site-editor/modules/posts/posts.php:174
-#: site-editor/modules/posts/posts.php:175
+#: site-editor/modules/posts/posts.php:183
+#: site-editor/modules/posts/posts.php:184
 msgid "Number Of Posts"
 msgstr ""
 
-#: site-editor/modules/posts/posts.php:184
-#: site-editor/modules/posts/posts.php:185
+#: site-editor/modules/posts/posts.php:193
+#: site-editor/modules/posts/posts.php:194
 msgid "Excerpt Length"
 msgstr ""
 
-#: site-editor/modules/posts/posts.php:200
-#: site-editor/modules/posts/posts.php:210
-#: site-editor/modules/posts/posts.php:211
+#: site-editor/modules/posts/posts.php:209
+#: site-editor/modules/posts/posts.php:219
+#: site-editor/modules/posts/posts.php:220
 msgid "Select Taxonomy"
 msgstr ""
 
-#: site-editor/modules/posts/posts.php:239
+#: site-editor/modules/posts/posts.php:248
 msgid "Select Terms"
 msgstr ""
 
-#: site-editor/modules/posts/posts.php:240
+#: site-editor/modules/posts/posts.php:249
 msgid "Select Terms for current selected Taxonomy"
 msgstr ""
 
-#: site-editor/modules/posts/posts.php:260
-msgid "Change skin"
+#: site-editor/modules/posts/posts.php:270
+msgid "Show Only Featured Posts"
 msgstr ""
 
-#: site-editor/modules/posts/skins/default/sed_posts.php:47
-msgid "Not found result"
+#: site-editor/modules/posts/skins/default/content.php:64
+msgid "Enter"
+msgstr "ورود"
+
+#: site-editor/modules/services/services.php:22
+#: site-editor/modules/services/services.php:107
+msgid "Omid Services"
 msgstr ""
+
+#: site-editor/modules/services/services.php:23
+#: site-editor/modules/services/services.php:108
+msgid "List of Omid Services"
+msgstr ""
+
+#: strong-testimonials/default/content.php:70
+msgid "Enter To Testimonial Form"
+msgstr "فرم نظرات مشتریان"
+
+#: template-parts/custom-post-type/single-post-gallery.php:30
+msgid "Images Gallery"
+msgstr "گالری تصاویر"
+
+#: template-parts/custom-post-type/single-service-gallery.php:34
+msgid "Services"
+msgstr "خدمات"
+
+#: template-parts/custom-post-type/single-service-gallery.php:103
+msgid "View Gallery"
+msgstr "مشاهده گالری"
+
+#~ msgid "Products"
+#~ msgstr "محصولات"
+
+#~ msgid "Previous page"
+#~ msgstr "صفحه قبلی"
+
+#~ msgid "Next page"
+#~ msgstr "صفحه بعدی"
+
+#~ msgid "Page"
+#~ msgstr "برگه"
+
+#~ msgid "Done Projects"
+#~ msgstr "پروژه های انجام شده"
+
+#~ msgid "Short Description"
+#~ msgstr "توضیحات کوتاه"
+
+#~ msgid "Description"
+#~ msgstr "توضیحات"
+
+#~ msgid "Employer:"
+#~ msgstr "کارفرما:"
+
+#~ msgid "Date:"
+#~ msgstr "تاریخ:"
+
+#~ msgid "Products..."
+#~ msgstr "محصولات..."
 
 #~ msgid "Products:"
 #~ msgstr "محصولات"
@@ -195,9 +261,6 @@ msgstr ""
 
 #~ msgid "Download"
 #~ msgstr "دانلود"
-
-#~ msgid "Read More"
-#~ msgstr "بیشتر بخوانید"
 
 #~ msgid "Your Last Login %s"
 #~ msgstr "آخرین ورود شما  %s"

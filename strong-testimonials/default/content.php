@@ -67,7 +67,7 @@
 
 		<div class="divider-link">
 			<span class="divider-content">
-				<button><a href="<?php echo esc_attr( esc_url( site_url( '/about_us#wpmtst-form' ) ) ); ?>" class=""><?php echo __("Enter To Testimonial Form");?></a></button>
+				<button><a href="<?php echo esc_attr( esc_url( site_url( '/about_us#wpmtst-form' ) ) ); ?>" class=""><?php echo __("Enter To Testimonial Form" , "omid");?></a></button>
 			</span>
 		</div>
 
