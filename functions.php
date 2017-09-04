@@ -204,7 +204,7 @@ function omid_register_theme_fields( $fields ){
 //add_filter( "sed_theme_options_fields_filter" , 'omid_register_theme_fields' , 10000 );
 
 
-//add_action( 'pre_get_posts', 'omid_per_page_query' );
+add_action( 'pre_get_posts', 'omid_per_page_query' );
 /**
  * Customize category query using pre_get_posts.
  *
@@ -216,26 +216,14 @@ function omid_register_theme_fields( $fields ){
  */
 function omid_per_page_query( $query ) {
 
-    $taxonomy = is_tax() ? get_queried_object()->taxonomy:"";
+    /*$is_blog = ( is_home() && is_front_page() ) || ( is_home() && !is_front_page() );
 
-    $is_taxonomy = in_array( $taxonomy , array( 'product-category'  ) );
+    if ( $query->is_main_query() && ! $query->is_feed() && ! is_admin() && ( is_category() || is_tag() || $is_blog )  ) {
+        $query->set( 'posts_per_page', '2' ); //Change this number to anything you like.
+    }*/
 
-    if ( $query->is_main_query() && ! $query->is_feed() && ! is_admin() && $is_taxonomy  ) {
-        $query->set( 'posts_per_page', '6' ); //Change this number to anything you like.
-    }
-
-    $post_type = $query->get('post_type');
-
-    $is_post_type = in_array( $post_type , array( 'product' , 'project' ) );
-
-    if ( $query->is_main_query() && ! $query->is_feed() && ! is_admin() && $is_post_type && is_post_type_archive() ) {
-        $query->set( 'posts_per_page', '6' ); //Change this number to anything you like.
-    }
-
-    $is_post_type = in_array( $post_type , array( 'service' ) );
-
-    if ( $query->is_main_query() && ! $query->is_feed() && ! is_admin() && $is_post_type && is_post_type_archive() ) {
-        $query->set( 'posts_per_page', '80' ); //Change this number to anything you like.
+    if ( $query->is_main_query() && ! $query->is_feed() && ! is_admin() && ( is_tax('video_cat') || is_post_type_archive('omid_video') )  ) {
+        $query->set( 'posts_per_page', '100' ); //Change this number to anything you like.
     }
 
 }
