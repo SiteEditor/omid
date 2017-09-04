@@ -20,25 +20,29 @@ $lightbox_id = "omid_images_gallery_single_page";
 
 	<div class="single-gallery-content">
 
-		<div class="single-heading">
-			<div class="single-heading-inner">
-				<h4>
-					<?php
-					$in_top = get_field('show_in_top_services');
+		<div class="sed-row-boxed">
 
-					if( $in_top ){
-						_e( 'Images Gallery' , 'omid' );
-					}else{
-						the_title();
-					}
-					?>
-				</h4>
+			<div class="single-heading">
+				<div class="single-heading-inner">
+					<h4>
+						<?php
+						$in_top = get_field('show_in_top_services');
+
+						if( $in_top ){
+							_e( 'Images Gallery' , 'omid' );
+						}else{
+							the_title();
+						}
+						?>
+					</h4>
+				</div>
 			</div>
+
+			<div class="general-separator"></div>
+
+			<?php omid_the_top_list_gallery_items( get_the_ID() , "gallery" );?>
+
 		</div>
-
-		<div class="general-separator"></div>
-
-		<?php omid_the_top_list_gallery_items( get_the_ID() , "gallery" );?>
 
 		<div class="single-content">
 			<div class="single-content-inner">

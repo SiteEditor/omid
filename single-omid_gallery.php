@@ -42,6 +42,12 @@ get_header(); ?>
 
 					}
 
+					?>
+					
+					<div class="hide"><?php the_content(); ?></div>
+
+					<?php
+
 				endwhile; // End of the loop.
 			?>
 

@@ -414,3 +414,10 @@
 
 </div> 
 
+<!--============================================-->
+
+<div class="google-map-marker-wrapper">
+	<div class="google-map-marker">
+		<div class="google-map-address"></div>
+	</div>
+</div>

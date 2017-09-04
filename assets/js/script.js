@@ -161,16 +161,30 @@
 
             $(this).slick({ 
                 rtl                 : $rtl, 
-                slidesToShow        : 7,
+                slidesToShow        : 11,
                 slidesToScroll      : 1,
                 arrows              : true,
                 dots                : false,
-                centerMode          : true,
-                centerPadding       : '110px',
-                focusOnSelect       : true,
+                //centerMode          : true,
+                //centerPadding       : '110px',
+                //focusOnSelect       : true,
                 prevArrow : '<span class="slide-nav-bt slide-prev"></span>',
                 nextArrow : '<span class="slide-nav-bt slide-next"></span>',
                 responsive: [{
+                        breakpoint: 1800,
+                        settings: {
+                            slidesToShow: 9,
+                            slidesToScroll: 1,  
+                        }
+                    },
+                    {
+                        breakpoint: 1440,
+                        settings: {
+                            slidesToShow: 7,
+                            slidesToScroll: 1,  
+                        }
+                    },
+                    {
                         breakpoint: 910,
                         settings: {
                             slidesToShow: 5,
@@ -181,11 +195,18 @@
                         breakpoint: 600,
                         settings: {
                             slidesToShow: 3,
-                            slidesToScroll: 1
+                            slidesToScroll: 1,
                         }
                     },
                     {
                         breakpoint: 480,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 1
+                        }
+                    },
+                    {
+                        breakpoint: 400,
                         settings: {
                             slidesToShow: 1,
                             slidesToScroll: 1
