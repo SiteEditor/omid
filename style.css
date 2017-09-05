@@ -2308,7 +2308,9 @@ body .master-slider-parent.ms-parent-id-2 {
 }  
 
 
-
+.search-form .search-field {
+    padding-right: 60px;
+}
 
 
 
