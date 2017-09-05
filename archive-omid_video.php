@@ -86,20 +86,26 @@ get_header(); ?>
 						<div class="current-video-wrapper">
 
 							<?php
+							
+								$self_hosted_video = get_field( "self_hosted_video_url" );
 
-							$self_hosted_video = get_field("self_hosted_video_url");
+								if( !empty( $self_hosted_video ) ){
 
-							if (!empty($self_hosted_video)) {
+									$poster_url = get_the_post_thumbnail_url( get_the_ID() , "full" );
 
-								echo do_shortcode('[video src="' . $self_hosted_video["url"] . '"]');
+									if ( ! $poster_url ) {
+										$poster_url = "";
+									}
 
-							} else {
+									echo do_shortcode('[video src="' . $self_hosted_video["url"] . '" poster="' . $poster_url . '"]');
 
-								$external_video_code = get_field("external_video_url");
+								}else{
 
-								echo $external_video_code;
+									$external_video_code = get_field( "external_video_url" );
 
-							}
+									echo $external_video_code;
+
+								}
 
 							?>
 
