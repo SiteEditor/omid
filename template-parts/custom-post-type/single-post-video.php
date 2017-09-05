@@ -21,7 +21,13 @@
 
 		if( !empty( $self_hosted_video ) ){
 
-			echo do_shortcode( '[video src="'.$self_hosted_video["url"].'"]' );
+			$poster_url = get_the_post_thumbnail_url( get_the_ID() , "full" );
+
+			if ( ! $poster_url ) {
+				$poster_url = "";
+			}
+
+			echo do_shortcode('[video src="' . $self_hosted_video["url"] . '" poster="' . $poster_url . '"]');
 
 		}else{
 
