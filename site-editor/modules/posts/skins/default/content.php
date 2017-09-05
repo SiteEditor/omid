@@ -35,7 +35,7 @@ if( strlen( $content_post ) > $excerpt_length )
 
         <?php if( $num_post % 2 == 1 ) { ?>
 
-            <div class="col-sm-5">
+            <div class="col-sm-6 tme-img-wrap">
 
                 <div class="tme-img">
 
@@ -47,7 +47,7 @@ if( strlen( $content_post ) > $excerpt_length )
 
         <?php } ?>
 
-        <div class="col-sm-7">
+        <div class="col-sm-6">
 
             <div class="tme-heading">
                 <div class="tme-heading-inner">
@@ -69,7 +69,7 @@ if( strlen( $content_post ) > $excerpt_length )
 
         <?php if( $num_post % 2 == 0 ) { ?>
 
-            <div class="col-sm-5">
+            <div class="col-sm-6 tme-img-wrap">
 
                 <div class="tme-img">
 

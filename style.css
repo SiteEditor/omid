@@ -1059,6 +1059,7 @@ p:empty {
 
 .services-slider-wrapper .services-slider-item.slick-slide {
     padding: 0 20px; 
+    text-align: center;
 }
 
 .services-slider-wrapper .tme-img {
@@ -1066,7 +1067,7 @@ p:empty {
     border-radius: 1000px;
     padding: 10px;    
     margin-top: 25px;
-    display: block;
+    display: inline-block;
 }
 
 .services-slider-wrapper .tme-img img {
@@ -1184,12 +1185,25 @@ p:empty {
 /******************************************/
 
 .portfolio-gallery-wrapper .portfolio-gallery-item {
-    padding: 30px 0;
+    padding: 15px 0;
 } 
+
+.portfolio-gallery-wrapper .portfolio-gallery-item .tme-wrapper.row {
+    margin: 0 -8px;
+}
+
+.portfolio-gallery-wrapper .portfolio-gallery-item .tme-wrapper.row > div {
+    padding: 8px;
+}
+
+.portfolio-gallery-wrapper .tme-img-wrap {
+    text-align: center;
+}
 
 .portfolio-gallery-wrapper .tme-img {
     border: 2px solid #121212;
     padding: 3px;  	
+    display: inline-block;
 }
 
 .portfolio-gallery-wrapper .tme-img img {
@@ -1223,7 +1237,9 @@ p:empty {
 /*******************************/
 
 .simple-gallery-wrapper {
-    border: 10px solid #231f20;
+    border: 10px solid #231f20;    
+    max-width: 400px;
+    margin: 0 auto;
 }
 
 .simple-gallery-wrapper .row {
@@ -1331,6 +1347,10 @@ p:empty {
 .testimonial-wrapper .testimonial-wrapper-inner .divider-link button * {
     position: relative;
     z-index: 2;
+}
+
+.testimonial-wrapper .testimonial-wrapper-inner .divider-link button a {
+    display: block;
 }
 
 .testimonial-wrapper .testimonial-slider-item {
@@ -2150,7 +2170,7 @@ body [id*="stars-menu-wrap-top"].stars-menu-bar-wrapper .starsmenu-search-wrappe
 }
 
 .google-map-marker {
-    width: 200px;
+    width: 314px;
     height: 137px;
     display: block;
     position: relative;
@@ -2158,10 +2178,17 @@ body [id*="stars-menu-wrap-top"].stars-menu-bar-wrapper .starsmenu-search-wrappe
     background-image: url(images/marker.png);
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: initial;
+    background-attachment: initial;    
+    margin: 0 auto;
+    cursor: pointer;
 }
 
-.google-map-address {
+.google-map-marker .google-map-address {
+    padding: 18px 26px 35px 54px;    
+    font-size: 11px;
+    line-height: 14px;
+    text-align: center;
+    color: #ddd;
     width: 212px;
     height: 136px;
     display: block;
@@ -2170,15 +2197,100 @@ body [id*="stars-menu-wrap-top"].stars-menu-bar-wrapper .starsmenu-search-wrappe
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: initial;
+    position: absolute;
+    top: 8px;
+    left: 165px;
+    right: auto;
+    bottom: auto;
+    opacity: 0;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    -webkit-transform: translateX(20%);
+    -moz-transform: translateX(20%);
+    -ms-transform: translateX(20%);
+    -o-transform: translateX(20%);
+    transform: translateX(20%);
+}
+
+.google-map-marker:hover .google-map-address {
+    opacity: 1;
+    -webkit-transform: translateX(0%);
+    -moz-transform: translateX(0%);
+    -ms-transform: translateX(0%);
+    -o-transform: translateX(0%);
+    transform: translateX(0%);
+}
+
+.google-map-marker .google-map-address .general-separator {
+    border-top: 1px solid #666;
+    margin: 5px auto;
+    position: relative;
+    max-width: 60px;
+}
+
+.google-map-marker .google-map-address .general-separator.sm:before {
+    width: 6px;
+    height: 6px; 
+    border-width: 1px;
+    border-color: #231f20;
+    top: -3px;
+    margin: 0 -3px;
+    box-shadow: 0 0 0 1px #666;
+    background-color: #bf1e2e;
 }
 
 
+/***********************************/
 
+body .ms-skin-minimal .ms-bullet {
+    width: 4px;
+    height: 4px;
+    display: block;
+    box-shadow: 0 0 0 1px #ddd;
+    border-radius: 100px;
+    background: #000;
+    border: 3px solid #fff;
+}
 
+body .ms-skin-minimal .ms-bullet-selected {
+    background: #bf1e2e;
+}
 
+body .ms-parent-id-1 .ms-bullets.ms-dir-h {
+    bottom: auto;
+    top: 32% !important;
+    right: 56.3%;
+}
 
+body .ms-overlay-layers .ms-slide-layers img.ms-layer {
+  border-radius: 1000px;
+}
 
+.master-slider-parent.ms-parent-id-2 .ms-slide-layers * {
+    text-align: center;
+} 
 
+body .master-slider-parent.ms-parent-id-2 {
+    display: none !important;
+}
+
+@media (max-width: 768px) {
+
+    body .master-slider-parent.ms-parent-id-1 {
+        display: none !important;
+    }
+
+    body .master-slider-parent.ms-parent-id-2 {
+        display: block !important;
+    }
+
+}  
 
 
 

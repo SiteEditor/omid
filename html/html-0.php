@@ -418,6 +418,10 @@
 
 <div class="google-map-marker-wrapper">
 	<div class="google-map-marker">
-		<div class="google-map-address"></div>
+		<div class="google-map-address">
+            <span class="text-first-main text-uppercase">omid photography</span>
+          	<div class="general-separator sm"></div>
+      		<span>sem. Nulla consequat massa quis enim donec pede justo</span>
+        </div>
 	</div>
 </div>
