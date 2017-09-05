@@ -1363,6 +1363,13 @@ p:empty {
     font-weight: normal;
 }
 
+@media (max-width: 768px) {
+
+    .portfolio-gallery-wrapper .portfolio-gallery-item .tme-wrapper.row {
+        text-align: center;
+    }
+
+}  
 
 /**************************/
 
@@ -2052,36 +2059,34 @@ body .mejs-overlay-button {
 
 /******************************************/
 
-
-
-.stars-menu-bar #menu-omid.stars-menu-bar-nav > li.menu-item::after {
-    top: -16px;
-    background-image: -webkit-gradient(linear, 0 0, 300% 100%, color-stop(0.25, #231f20), color-stop(0.25, #231f20));
-    background-image: linear-gradient(135deg, #231f20 25%, transparent 25%), linear-gradient(225deg, #231f20 25%, transparent 25%);
-    background-position: 50%; 
-    right: 0;
-    left: 0;
-    z-index: 10;
-    display: block;
-    height: 20px;
-    background-size: 14px 100%;
-    position: absolute;
-    content: '';
-    pointer-events: none;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    transition: all 0.3s; 
-}
-
-.stars-menu-bar #menu-omid.stars-menu-bar-nav > li.menu-item.current-menu-item:after,
-.stars-menu-bar #menu-omid.stars-menu-bar-nav > li.menu-item.current-menu-ancestor:after,
-.stars-menu-bar #menu-omid.stars-menu-bar-nav > li.menu-item:focus:after,
-.stars-menu-bar #menu-omid.stars-menu-bar-nav > li.menu-item:active:after,
-.stars-menu-bar #menu-omid.stars-menu-bar-nav > li.menu-item:hover:after {
-    top: 100%;
-}
-
 @media (min-width: 910px) {
+  .stars-menu-bar #menu-omid.stars-menu-bar-nav > li.menu-item::after {
+      top: -16px;
+      background-image: -webkit-gradient(linear, 0 0, 300% 100%, color-stop(0.25, #231f20), color-stop(0.25, #231f20));
+      background-image: linear-gradient(135deg, #231f20 25%, transparent 25%), linear-gradient(225deg, #231f20 25%, transparent 25%);
+      background-position: 50%; 
+      right: 0;
+      left: 0;
+      z-index: 10;
+      display: block;
+      height: 20px;
+      background-size: 14px 100%;
+      position: absolute;
+      content: '';
+      pointer-events: none;
+      -webkit-transition: all 0.3s;
+      -moz-transition: all 0.3s;
+      transition: all 0.3s; 
+  }
+
+  .stars-menu-bar #menu-omid.stars-menu-bar-nav > li.menu-item.current-menu-item:after,
+  .stars-menu-bar #menu-omid.stars-menu-bar-nav > li.menu-item.current-menu-ancestor:after,
+  .stars-menu-bar #menu-omid.stars-menu-bar-nav > li.menu-item:focus:after,
+  .stars-menu-bar #menu-omid.stars-menu-bar-nav > li.menu-item:active:after,
+  .stars-menu-bar #menu-omid.stars-menu-bar-nav > li.menu-item:hover:after {
+      top: 100%;
+  }
+
 	#stars-menu-wrap-top.stars-menu-bar-wrapper .stars-menu-bar-wrapper-inner .starsmenu-search-wrapper .starsmenu-search-open, 
 	[id*="stars-menu-wrap-top"].stars-menu-bar-wrapper .stars-menu-bar-wrapper-inner .starsmenu-search-wrapper .starsmenu-search-open {	
 	    display: block;
@@ -2094,6 +2099,12 @@ body .mejs-overlay-button {
 	}
 }
 
+@media (max-width: 909px) {
+  #stars-menu-wrap-top .stars-menu-bar .stars-menu-bar-nav > .menu-item > .starsmenu-item-inner .starsmenu-title, 
+  [id*="stars-menu-wrap-top"] .stars-menu-bar .stars-menu-bar-nav > .menu-item > .starsmenu-item-inner .starsmenu-title {
+      padding: 0 !important; 
+  }
+}
 
 body #stars-menu-wrap-top.stars-menu-bar-wrapper .starsmenu-search-wrapper .starsmenu-search-container, 
 body [id*="stars-menu-wrap-top"].stars-menu-bar-wrapper .starsmenu-search-wrapper .starsmenu-search-container {
@@ -2271,6 +2282,10 @@ body .ms-parent-id-1 .ms-bullets.ms-dir-h {
 body .ms-overlay-layers .ms-slide-layers img.ms-layer {
   border-radius: 1000px;
 }
+
+.master-slider-parent.ms-parent-id-1 .ms-slide-layers * {
+    text-align: right;
+} 
 
 .master-slider-parent.ms-parent-id-2 .ms-slide-layers * {
     text-align: center;
